@@ -13,7 +13,7 @@ import (
 	"github.com/open-constructs/cdk-terrain-go/cdktn"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/cdktn-io/cfncompat/0.2.0/docs cfncompat}.
+// Represents a {@link https://registry.terraform.io/providers/cdktn-io/cfncompat/0.3.0/docs cfncompat}.
 type CfncompatProvider interface {
 	cdktn.TerraformProvider
 	AccessKey() *string
@@ -629,7 +629,7 @@ func (j *jsiiProxy_CfncompatProvider) TokenInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/cdktn-io/cfncompat/0.2.0/docs cfncompat} Resource.
+// Create a new {@link https://registry.terraform.io/providers/cdktn-io/cfncompat/0.3.0/docs cfncompat} Resource.
 func NewCfncompatProvider(scope constructs.Construct, id *string, config *CfncompatProviderConfig) CfncompatProvider {
 	_init_.Initialize()
 
@@ -647,7 +647,7 @@ func NewCfncompatProvider(scope constructs.Construct, id *string, config *Cfncom
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/cdktn-io/cfncompat/0.2.0/docs cfncompat} Resource.
+// Create a new {@link https://registry.terraform.io/providers/cdktn-io/cfncompat/0.3.0/docs cfncompat} Resource.
 func NewCfncompatProvider_Override(c CfncompatProvider, scope constructs.Construct, id *string, config *CfncompatProviderConfig) {
 	_init_.Initialize()
 

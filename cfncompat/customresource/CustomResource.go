@@ -12,7 +12,7 @@ import (
 	"github.com/open-constructs/cdk-terrain-go/cdktn"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/cdktn-io/cfncompat/0.2.0/docs/resources/custom_resource cfncompat_custom_resource}.
+// Represents a {@link https://registry.terraform.io/providers/cdktn-io/cfncompat/0.3.0/docs/resources/custom_resource cfncompat_custom_resource}.
 type CustomResource interface {
 	cdktn.TerraformResource
 	// Experimental.
@@ -568,7 +568,7 @@ func (j *jsiiProxy_CustomResource) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/cdktn-io/cfncompat/0.2.0/docs/resources/custom_resource cfncompat_custom_resource} Resource.
+// Create a new {@link https://registry.terraform.io/providers/cdktn-io/cfncompat/0.3.0/docs/resources/custom_resource cfncompat_custom_resource} Resource.
 func NewCustomResource(scope constructs.Construct, id *string, config *CustomResourceConfig) CustomResource {
 	_init_.Initialize()
 
@@ -586,7 +586,7 @@ func NewCustomResource(scope constructs.Construct, id *string, config *CustomRes
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/cdktn-io/cfncompat/0.2.0/docs/resources/custom_resource cfncompat_custom_resource} Resource.
+// Create a new {@link https://registry.terraform.io/providers/cdktn-io/cfncompat/0.3.0/docs/resources/custom_resource cfncompat_custom_resource} Resource.
 func NewCustomResource_Override(c CustomResource, scope constructs.Construct, id *string, config *CustomResourceConfig) {
 	_init_.Initialize()
 

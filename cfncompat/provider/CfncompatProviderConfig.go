@@ -9,91 +9,91 @@ type CfncompatProviderConfig struct {
 	//
 	// Can also be sourced from the `AWS_ACCESS_KEY_ID` environment variable, or via a shared credentials file if `profile` is specified.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/cdktn-io/cfncompat/0.2.0/docs#access_key CfncompatProvider#access_key}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/cdktn-io/cfncompat/0.3.0/docs#access_key CfncompatProvider#access_key}
 	AccessKey *string `field:"optional" json:"accessKey" yaml:"accessKey"`
 	// Alias name.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/cdktn-io/cfncompat/0.2.0/docs#alias CfncompatProvider#alias}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/cdktn-io/cfncompat/0.3.0/docs#alias CfncompatProvider#alias}
 	Alias *string `field:"optional" json:"alias" yaml:"alias"`
 	// Configuration for assuming an IAM role prior to making AWS API calls.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/cdktn-io/cfncompat/0.2.0/docs#assume_role CfncompatProvider#assume_role}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/cdktn-io/cfncompat/0.3.0/docs#assume_role CfncompatProvider#assume_role}
 	AssumeRole *CfncompatProviderAssumeRole `field:"optional" json:"assumeRole" yaml:"assumeRole"`
 	// Configuration for assuming an IAM role using a web identity token.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/cdktn-io/cfncompat/0.2.0/docs#assume_role_with_web_identity CfncompatProvider#assume_role_with_web_identity}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/cdktn-io/cfncompat/0.3.0/docs#assume_role_with_web_identity CfncompatProvider#assume_role_with_web_identity}
 	AssumeRoleWithWebIdentity *CfncompatProviderAssumeRoleWithWebIdentity `field:"optional" json:"assumeRoleWithWebIdentity" yaml:"assumeRoleWithWebIdentity"`
 	// Default S3 bucket used for cfncompat_custom_resource response transport (the pre-signed PUT URL the custom resource handler writes its response to) when a cfncompat_custom_resource does not set its own `response_bucket`.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/cdktn-io/cfncompat/0.2.0/docs#custom_resource_bucket CfncompatProvider#custom_resource_bucket}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/cdktn-io/cfncompat/0.3.0/docs#custom_resource_bucket CfncompatProvider#custom_resource_bucket}
 	CustomResourceBucket *string `field:"optional" json:"customResourceBucket" yaml:"customResourceBucket"`
 	// Service endpoint URL overrides, primarily for testing against LocalStack.
 	//
-	// Only used by cfncompat_custom_resource; the provider-defined functions make no AWS API calls.
+	// Only used by cfncompat_custom_resource and the cfncompat data sources; the provider-defined functions make no AWS API calls.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/cdktn-io/cfncompat/0.2.0/docs#endpoints CfncompatProvider#endpoints}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/cdktn-io/cfncompat/0.3.0/docs#endpoints CfncompatProvider#endpoints}
 	Endpoints *CfncompatProviderEndpoints `field:"optional" json:"endpoints" yaml:"endpoints"`
 	// URL of a proxy to use for HTTP requests when accessing the AWS API.
 	//
 	// Can also be set using the `HTTP_PROXY`/`http_proxy` environment variables.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/cdktn-io/cfncompat/0.2.0/docs#http_proxy CfncompatProvider#http_proxy}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/cdktn-io/cfncompat/0.3.0/docs#http_proxy CfncompatProvider#http_proxy}
 	HttpProxy *string `field:"optional" json:"httpProxy" yaml:"httpProxy"`
 	// URL of a proxy to use for HTTPS requests when accessing the AWS API.
 	//
 	// Can also be set using the `HTTPS_PROXY`/`https_proxy` environment variables.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/cdktn-io/cfncompat/0.2.0/docs#https_proxy CfncompatProvider#https_proxy}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/cdktn-io/cfncompat/0.3.0/docs#https_proxy CfncompatProvider#https_proxy}
 	HttpsProxy *string `field:"optional" json:"httpsProxy" yaml:"httpsProxy"`
 	// Explicitly allow the provider to perform "insecure" SSL requests. Defaults to `false`.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/cdktn-io/cfncompat/0.2.0/docs#insecure CfncompatProvider#insecure}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/cdktn-io/cfncompat/0.3.0/docs#insecure CfncompatProvider#insecure}
 	Insecure interface{} `field:"optional" json:"insecure" yaml:"insecure"`
 	// The maximum number of times an AWS API request is retried on failure. If not set, defaults to 25.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/cdktn-io/cfncompat/0.2.0/docs#max_retries CfncompatProvider#max_retries}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/cdktn-io/cfncompat/0.3.0/docs#max_retries CfncompatProvider#max_retries}
 	MaxRetries *float64 `field:"optional" json:"maxRetries" yaml:"maxRetries"`
 	// Comma-separated list of hosts that should not use HTTP or HTTPS proxies.
 	//
 	// Can also be set using the `NO_PROXY`/`no_proxy` environment variables.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/cdktn-io/cfncompat/0.2.0/docs#no_proxy CfncompatProvider#no_proxy}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/cdktn-io/cfncompat/0.3.0/docs#no_proxy CfncompatProvider#no_proxy}
 	NoProxy *string `field:"optional" json:"noProxy" yaml:"noProxy"`
 	// The AWS profile name as set in the shared credentials/config files.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/cdktn-io/cfncompat/0.2.0/docs#profile CfncompatProvider#profile}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/cdktn-io/cfncompat/0.3.0/docs#profile CfncompatProvider#profile}
 	Profile *string `field:"optional" json:"profile" yaml:"profile"`
-	// The AWS region used by cfncompat_custom_resource API calls.
+	// The AWS region used by cfncompat_custom_resource API calls, and reported as CloudFormation's AWS::Region by the cfncompat_pseudo_parameters data source.
 	//
 	// Can also be sourced from the `AWS_REGION`/`AWS_DEFAULT_REGION` environment variables, a shared config file, or the EC2 Instance Metadata Service.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/cdktn-io/cfncompat/0.2.0/docs#region CfncompatProvider#region}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/cdktn-io/cfncompat/0.3.0/docs#region CfncompatProvider#region}
 	Region *string `field:"optional" json:"region" yaml:"region"`
 	// The AWS secret key.
 	//
 	// Can also be sourced from the `AWS_SECRET_ACCESS_KEY` environment variable, or via a shared credentials file if `profile` is specified.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/cdktn-io/cfncompat/0.2.0/docs#secret_key CfncompatProvider#secret_key}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/cdktn-io/cfncompat/0.3.0/docs#secret_key CfncompatProvider#secret_key}
 	SecretKey *string `field:"optional" json:"secretKey" yaml:"secretKey"`
 	// Paths to shared config files. If not set, defaults to `~/.aws/config`.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/cdktn-io/cfncompat/0.2.0/docs#shared_config_files CfncompatProvider#shared_config_files}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/cdktn-io/cfncompat/0.3.0/docs#shared_config_files CfncompatProvider#shared_config_files}
 	SharedConfigFiles *[]*string `field:"optional" json:"sharedConfigFiles" yaml:"sharedConfigFiles"`
 	// Paths to shared credentials files. If not set, defaults to `~/.aws/credentials`.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/cdktn-io/cfncompat/0.2.0/docs#shared_credentials_files CfncompatProvider#shared_credentials_files}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/cdktn-io/cfncompat/0.3.0/docs#shared_credentials_files CfncompatProvider#shared_credentials_files}
 	SharedCredentialsFiles *[]*string `field:"optional" json:"sharedCredentialsFiles" yaml:"sharedCredentialsFiles"`
 	// Skip the AWS EC2 Instance Metadata API check.
 	//
 	// Useful when running somewhere without a metadata API endpoint (setting to `true` prevents authenticating via IMDS).
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/cdktn-io/cfncompat/0.2.0/docs#skip_metadata_api_check CfncompatProvider#skip_metadata_api_check}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/cdktn-io/cfncompat/0.3.0/docs#skip_metadata_api_check CfncompatProvider#skip_metadata_api_check}
 	SkipMetadataApiCheck interface{} `field:"optional" json:"skipMetadataApiCheck" yaml:"skipMetadataApiCheck"`
 	// Session token for temporary credentials, typically provided after identity federation or MFA login.
 	//
 	// Can also be sourced from the `AWS_SESSION_TOKEN` environment variable.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/cdktn-io/cfncompat/0.2.0/docs#token CfncompatProvider#token}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/cdktn-io/cfncompat/0.3.0/docs#token CfncompatProvider#token}
 	Token *string `field:"optional" json:"token" yaml:"token"`
 }
 
