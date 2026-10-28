@@ -5,7 +5,7 @@ package providerfunctions
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktn-io/cdktn-provider-cfncompat-go/cfncompat/jsii"
+	_init_ "github.com/cdktn-io/cdktn-provider-cfncompat-go/cfncompat/v2/jsii"
 
 	"github.com/open-constructs/cdk-terrain-go/cdktn"
 )

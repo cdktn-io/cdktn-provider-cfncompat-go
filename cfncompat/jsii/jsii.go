@@ -16,7 +16,7 @@ import (
 	cdktn      "github.com/open-constructs/cdk-terrain-go/cdktn/jsii"
 )
 
-//go:embed cdktn-provider-cfncompat-1.1.0.tgz
+//go:embed cdktn-provider-cfncompat-2.0.0.tgz
 var tarball []byte
 
 // Initialize loads the necessary packages in the @jsii/kernel to support the enclosing module.
@@ -27,5 +27,5 @@ func Initialize() {
 	constructs.Initialize()
 
 	// Load this library into the kernel
-	_jsii_.Load("@cdktn/provider-cfncompat", "1.1.0", tarball)
+	_jsii_.Load("@cdktn/provider-cfncompat", "2.0.0", tarball)
 }
